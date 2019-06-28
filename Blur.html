@@ -1,0 +1,447 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Blur</title>
+</head>
+<style>
+	
+#header{
+	width:100%;
+	background-color:#FFFFFF;
+	box-shadow:0 2px 3px #aaaaaa;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:999;
+}
+
+#nav{
+	width: 1200px;
+	position:relative;
+	margin: 0 auto;
+
+}
+#nav ul {
+	list-style-type: none;
+	padding:0px 0 0 0px;
+}
+#nav li {
+	float: left;
+	border-right: 2px solid #7B7B7B;
+}
+#nav li a:link, #nav a:visited {
+	color: #000;
+	display: block;
+	text-align: center;
+	padding: 0px 45px 15px 45px;
+	text-decoration: none;
+
+}
+#nav li a:hover {
+	text-decoration: none;
+	border-bottom:3px solid #A40000;
+}
+#nav li a.active{
+	text-decoration: none;
+	border-bottom:3px solid #A40000;
+	
+}
+#login{
+	position:absolute;
+	right:0;
+	top:0;
+	width:100px;
+	margin-top:0px;
+	text-align:right;
+}
+#login a:link,#login a:visited{
+	color:#000;
+	text-decoration:none;	
+}
+#login a:hover{
+	text-decoration:underline;
+}
+.font{
+		font-family:"汉仪锐智W";
+		font-size:20px;
+	}	
+
+#container{
+	width:1200px;
+	margin:0 auto;
+	background-color:#7E6B6C;
+	height:5500px;
+	font-size: 20px;
+
+}	
+
+
+.biaoti{
+		padding-top: 80px;
+		color: #FFFFFF;
+		font-size:50px;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+	}
+#introduction{
+	margin:80px;
+	text-indent: 2em;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	font-size:20px;
+	text-align: center;
+
+	}
+.album{
+	width:200px;
+	margin:50px;
+	float:left;
+	overflow:hidden;	
+	position:relative;
+}
+
+.info{
+	text-align:center;
+	position:absolute;
+	top:248px;
+	left:0;
+	width:200px;
+	height:154px;
+	padding:0 5px;
+	color:#FFF;
+	background-color:rgba(0,0,0,0.7);
+	transition:all 0.5s;
+}
+.album:hover .info{
+	top:50px;
+}
+.info h3{
+	font-weight:normal;
+	font-size:15px;
+	height:30px;
+	line-height:30px;
+	margin-bottom:15px;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+.info p{
+	margin-top:-3px;
+	font-size:20px;
+}
+.info a{
+	border:1px solid #FFF;
+	border-radius:10px;
+	padding:6px 20px;
+}
+.info a:link,.info a:visited,.info a:hover{
+	color:#FFF;
+	text-decoration:none;
+}
+#albumall{
+		width: 1200px;
+		margin:0 auto;
+	}
+#photo{
+			text-align: center;
+	margin:40px;
+	}
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}	
+.member{
+
+	width:1200px;
+		margin:100px auto;
+	position: relative;
+	}
+.pic{
+			float:left;
+		width:400px;
+	box-shadow: 3px 3px 10px #161616;
+	margin-left: 50px;
+	}
+.words{
+width:650px;
+float:right;
+	margin-right: 50px;
+	}
+.pic img{
+	vertical-align: bottom;
+	
+	}
+.reading{
+		position: absolute;
+	top:300px;
+	left:500px;
+	background-color:#FFDD2C;
+	padding:0px 15px;
+	border-radius: 5%;
+	box-shadow: 1px 1px 1px #161616;
+	line-height: 5px;
+	}
+	
+
+	
+	.pictwo{
+			float:right;
+		width:400px;
+		margin-right: 50px;
+			box-shadow: 3px 3px 10px #161616;
+	}
+.wordstwo{
+width:600px;
+float:left;
+	margin-left: 50px;
+	}
+.pictwo img{
+	vertical-align: bottom;
+	
+	}
+.readingtwo{
+	position: absolute;
+	top:350px;
+	left:50px;
+	background-color:#FFDD2C;
+	padding:0px 15px;
+	border-radius: 5%;
+	box-shadow: 1px 1px 1px #161616;
+	line-height: 5px;
+	}
+	
+	}
+	
+#documentary{
+width:1400px;
+margin:0 auto;
+
+		text-align: center;
+	}
+footer{
+	margin-top:20px;
+	color:#FFF;
+	text-align:center;
+	padding:30px 0;
+	background-color:#0C0431;
+}
+
+#dopic{
+		position:relative;
+text-align: center;
+		}
+	
+#doplay{
+		position:absolute;
+	
+	top:30%;
+	left:45%;
+	z-index: 998;
+		}
+@font-face {
+	font-family:"汉仪锐智W";
+	src: url('font/HYRuiZhiW-2.ttf'); 
+	}
+</style>
+<body>
+<div id="header">
+  <div id="nav" class="font">
+<ul  class="clearfix" style="margin-bottom: 0;">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="Blur.html" class="active">Blur</a></li>
+	<li><a href="No-Party-For-Cao-Dong.html">草东没有派对</a></li>
+ 	  <li><a href="The-Beatles.html">The Beatles </a></li>
+	  <li><a href="Yang-qianhua.html">杨千嬅</a></li>
+	  <li><a href="Luxiansenband.html">鹿先森乐队</a></li>
+    </ul>
+<div id="login">
+  		<a href="#">登录</a> | <a href="#">注册</a>
+  	</div>
+  </div>
+  
+</div>
+
+	
+	<div id="container">
+<p class="biaoti"><strong>Introduction</strong></p>
+	  <div id="introduction">
+		<p>Blur are an English rock band formed in London in 1988. The group consists of lead vocalist/keyboardist Damon Albarn, guitarist/vocalist Graham Coxon, bassist Alex James and drummer Dave Rowntree. Their debut album Leisure (1991) incorporated the sounds of Madchester and shoegazing. Following a stylistic change influenced by English guitar pop groups such as the Kinks, the Beatles and XTC, Blur released Modern Life Is Rubbish (1993), Parklife (1994) and The Great Escape (1995). In the process, the band became central to the Britpop music and culture movement, and achieved mass popularity in the UK, aided by a chart battle with rivals Oasis in 1995 dubbed the "Battle of Britpop". </p>
+
+		<p>In recording their follow-up, Blur (1997), the band underwent another reinvention, showing influence from the lo-fi style of American indie rock groups. The band's third UK number one album, Blur included the "Song 2" single, which brought them mainstream success in the US. Their next album, 13 (1999) saw the band members experimenting with electronic and gospel music, and featured more personal lyrics from Albarn. In May 2002, Coxon left Blur during the recording of their seventh album Think Tank (2003). Containing electronic sounds and more minimal guitar work, the album was marked by Albarn's growing interest in hip hop and African music. After a 2003 tour without Coxon, Blur did no studio work or touring as a band, as members engaged in other projects. </p>
+
+		<p>Blur reunited, with Coxon back in the fold, for a series of concerts in 2009. In the following years they released several singles and retrospective compilations, and toured internationally. In 2012, the group received a Brit Award for Outstanding Contribution to Music. Their first major release in twelve years, The Magic Whip (2015), became the sixth consecutive Blur studio album to top the British charts.</p>
+
+		<div id="photo">
+			<img src="images/01.jpg" width="800" height="420" alt=""/>
+		</div>
+
+	  </div>
+		
+<p class="biaoti"><strong>Members</strong></p>	
+		
+	  <div id="members" class="clearfix">
+
+			<div class="member clearfix">
+						<div class="pic">
+			<img src="images/damon.jpg" width="400" height="400" alt=""/>
+						</div>
+					 <div class="words">
+					  <h3>Damon Albarn</h3>
+						 <p>Damon Albarn OBE is an English musician, singer, songwriter, and record producer, best known as the lead singer of the rock band Blur and as the co-founder, lead vocalist, instrumentalist, and principal songwriter of the virtual band Gorillaz.</p>
+				</div>
+						 <div class="reading">
+						<p><a href="http://www.wikizero.biz/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGFtb25fQWxiYXJu" target="new">Get More</a></p>
+				</div>
+		</div>
+
+
+			<div class="member clearfix ">
+						<div class="pictwo">
+					   <img src="images/graham.jpg" width="400" height="394" alt=""/> </div>
+					 <div class="wordstwo">
+					  <h3>Graham Coxon</h3>
+						 <p>Graham Leslie Coxon (born 12 March 1969) is an English musician, singer-songwriter and painter who came to prominence as a founding member of the rock band Blur. As the group's lead guitarist and secondary vocalist, Coxon is featured on seven of Blur's studio albums, from 1991's Leisure to 2015's The Magic Whip. He has also led a solo career since 1998. As well as being a musician, Coxon is a visual artist: he designed the cover art for all his solo albums as well as Blur's 13 (1999).</p>
+				</div>
+						 <div class="readingtwo">
+						<p><a href="http://www.wikizero.biz/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR3JhaGFtX0NveG9u" target="new">Get More</a></p>
+				</div>
+		</div>
+
+			<div class="member clearfix">
+				<div class="pic">
+			    <img src="images/alex.jpg" width="400" height="398" alt=""/> </div>
+										 <div class="words">
+										  <h3>Alex James</h3>
+											 <p>Steven Alexander James, FRSA (born 21 November 1968) is an English musician and songwriter, as well as a journalist and cheesemaker. Best known as the bassist of the band Blur, he has also played with temporary bands Fat Les, Me Me Me, WigWam and Bad Lieutenant.
+</p>
+									</div>
+											 <div class="reading">
+											<p><a href="http://www.wikizero.biz/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWxleF9KYW1lc18obXVzaWNpYW4p" target="new">Get More</a></p>
+									</div>
+		  </div>
+
+<div class="member clearfix ">
+						<div class="pictwo">
+      <img src="images/dave.jpg" width="400" height="412" alt=""/> </div>
+					 <div class="wordstwo">
+					  <h3>Dave Rowntree</h3>
+						 <p>David Alexander De Horne Rowntree (born 8 May 1964)is an English musician, politician, solicitor and animator. He is the drummer for the rock band Blur. He is a councillor in Norfolk County Council, representing the Labour Party.</p>
+				</div>
+						 <div class="readingtwo">
+						<p><a href="http://www.wikizero.biz/index.php?q=aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGF2ZV9Sb3dudHJlZQ" target="new">Get More</a></p>
+				</div>
+	    </div>
+
+
+
+
+	  </div>		
+		
+
+
+	<div id="albumall">
+		<p class="biaoti"><strong>Music Album</strong></p>
+		<div class="album">
+	  <img src="images/Blur-13.jpg" width="199" height="198" alt=""/>
+			<div class="info">
+			  <h3>13</h3>
+				 <p>1999</p>
+				<p><a href="https://music.163.com/#/album?id=1555609" target="new">播放</a></p>
+		  </div>
+		</div>
+
+		<div class="album">
+		  <img src="images/Blur-Blur.jpg" width="200" height="198" alt=""/>
+			<div class="info">
+			  <h3>Blur</h3>
+				 <p>1997</p>
+				<p><a href="https://music.163.com/#/album?id=1555607" target="new">播放</a></p>
+		  </div>
+		</div>
+
+		<div class="album">
+	  <img src="images/Blur-Leisure.jpeg" width="200" height="198" alt=""/>
+			<div class="info">
+			  <h3>Leisure</h3>
+				 <p>1991</p>
+				<p><a href="https://music.163.com/#/album?id=1555602" target="new">播放</a></p>
+		  </div>
+		</div>
+
+		<div class="album">
+	   <img src="images/Blur-ModernLifeIsRubbish.jpeg" width="200" height="198" alt=""/>
+			<div class="info">
+			  <h3>Modern Life Is Rubbish</h3>
+				 <p>1993</p>
+				<p><a href="https://music.163.com/#/album?id=1555601" target="new">播放</a></p>
+		  </div>
+		</div>
+
+		<div class="album">
+	  <img src="images/Blur-Parklife.jpg" width="200" height="198" alt=""/>
+			<div class="info">
+			  <h3>Parklife</h3>
+				 <p>1994</p>
+				<p><a href="https://music.163.com/#/album?id=1555605" target="new">播放</a></p>
+		  </div>
+		</div>
+
+		<div class="album">
+	   <img src="images/Blur-ThinkTank.jpg" width="200" height="198" alt=""/>
+			<div class="info">
+			  <h3>ThinkTank</h3>
+				 <p>2003</p>
+				<p><a href="https://music.163.com/#/album?id=399727" target="new">播放</a></p>
+		  </div>
+		</div>
+
+		<div class="album">
+	  <img src="images/the-great-escape-blur.20150204.540.jpg" width="200" height="198" alt=""/>
+			<div class="info">
+			  <h3>The Great Escape</h3>
+				 <p>1995</p>
+				<p><a href="https://music.163.com/#/album?id=1555598" target="new">播放</a></p>
+		  </div>
+		</div>
+
+		<div class="album">
+	  <img src="images/the-magic-whip.jpg" width="200" height="198" alt=""/>
+			<div class="info">
+			  <h3>The Magic Whip</h3>
+				 <p>2015</p>
+				<p><a href="https://music.163.com/#/album?id=3112030" target="new">播放</a></p>
+		  </div>
+		</div>
+
+	</div>		
+  
+
+		
+	<div id="documentary" class="clearfix">	
+	
+	<p class="biaoti"><strong>Documentary</strong></p>
+		<div id="dopic">
+			<img src="images/No Distance Left To Run.jpg" width="1000" height="435" alt=""/>
+		
+		<div id="doplay"> <a href="https://www.bilibili.com/video/av18421256?from=search&seid=4588116029515784110" target="new"><img src="images/play.png" width="150" height="150" alt=""/></a>
+		</div>
+		</div>
+</div>
+		
+
+
+</div>	
+	
+	
+	
+<footer>
+Copyright &copy; 联系我们:肖晓蓉 
+</footer>	
+	
+	
+	
+
+
+</body>
+</html>

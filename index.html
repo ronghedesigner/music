@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<link href="css/skippr.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+#header{
+	width:100%;
+	background-color:#FFFFFF;
+	box-shadow:0 2px 3px #aaaaaa;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:999;
+}
+
+#nav{
+	width: 1200px;
+	position:relative;
+	margin: 0 auto;
+
+}
+#nav ul {
+	list-style-type: none;
+	padding:0px 0 0 0px;
+}
+#nav li {
+	float: left;
+	border-right: 2px solid #7B7B7B;
+}
+#nav li a:link, #nav a:visited {
+	color: #000;
+	display: block;
+	text-align: center;
+	padding: 0px 45px 15px 45px;
+	text-decoration: none;
+
+}
+#nav li a:hover {
+	text-decoration: none;
+	border-bottom:3px solid #A40000;
+}
+#nav li a.active{
+	text-decoration: none;
+	border-bottom:3px solid #A40000;
+	
+}
+#login{
+	position:absolute;
+	right:0;
+	top:0;
+	width:100px;
+	margin-top:0px;
+	text-align:right;
+}
+#login a:link,#login a:visited{
+	color:#000;
+	text-decoration:none;	
+}
+#login a:hover{
+	text-decoration:underline;
+}
+	.font{
+		font-family:"汉仪锐智W";
+		font-size:20px;
+	}	
+
+body{
+	padding:0;
+	margin:0;
+}
+#banner{
+	width:1200px;
+	height:800px;
+margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+	
+footer{
+	margin-top:20px;
+	color:#FFF;
+	text-align:center;
+	padding:30px 0;
+	background-color:#0C0431;
+}
+@font-face {
+	font-family:"汉仪锐智W";
+	src: url('font/HYRuiZhiW-2.ttf'); 
+	}
+</style>
+<body>
+<div id="header">
+  <div id="nav" class="font">
+<ul  class="clearfix">
+      <li><a href="index.html" class="active">首页</a></li> 
+	  <li><a href="Blur.html">Blur</a></li>
+      <li><a href="No-Party-For-Cao-Dong.html">草东没有派对</a></li>
+ 	  <li><a href="The-Beatles.html">The Beatles </a></li>
+	  <li><a href="Yang-qianhua.html">杨千嬅</a></li>
+	  <li><a href="Luxiansenband.html">鹿先森乐队</a></li>
+    </ul>
+<div id="login">
+  		<a href="#">登录</a> | <a href="#">注册</a>
+  	</div>
+  </div>
+  
+</div>
+	
+<div id="banner">
+    <div id="theTarget">
+        <div style="background-image: url(images/01.jpg)"></div>
+		<div style="background-image: url(images/cd2.jpg)"></div>
+      <div style="background-image:url(images/15.jpeg)"></div> 
+		<div style="background-image: url(images/yqh.jpg)"></div>
+        <div style="background-image: url(images/lxx3.jpg)"></div>
+
+    </div>    
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/skippr.js"></script>
+<script>
+$(document).ready(function(){
+    $("#theTarget").skippr();
+});
+</script>	
+	
+<footer>
+Copyright &copy; 联系我们:肖晓蓉 周康芷 王安琪 王子怡 商慧乐 索剑桥
+</footer>
+	
+</body>
+</html>
